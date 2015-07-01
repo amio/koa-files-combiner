@@ -9,6 +9,7 @@ module.exports = function(root) {
 
   return function*(next) {
 
+    // TODO: support custom urlParser
     var targetsMeta = urlParser(this.request.url)
 
     if (!targetsMeta) {

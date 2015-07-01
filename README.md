@@ -15,3 +15,8 @@ app.use(serve(path.join(__dirname, 'path/to/static/files/root')))
 
 app.listen(3000)
 ```
+
+Then request the files bundle in browser:
+```
+http://localhost:3000/combine/js/global/libs.min.js,/bootstrap/bootstrap.min.js
+```
