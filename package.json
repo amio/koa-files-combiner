@@ -1,0 +1,16 @@
+{
+  "name": "koa-files-combiner",
+  "version": "1.0.0",
+  "description": "A koa middleware for combining files.",
+  "repository": "amio/koa-file-combiner",
+  "keywords": ["file", "combine", "join", "koa", "middleware"],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amio <jinxiaowei@baixing.com>",
+  "license": "ISC",
+  "dependencies": {
+    "files-combiner": "^1.0.0"
+  }
+}
