@@ -24,3 +24,21 @@ http://localhost:3000/combine/js/global/libs.min.js,/bootstrap/bootstrap.min.js
                         |
                       use combine service
 ```
+
+### Options
+
+```javascript
+app.use(combine('path/to/static/files/root', options))
+```
+which `options` could be:
+```
+{
+  prePathParser: function(url) { /*...*/ return url },
+  postPathParser: function(url) { /*...*/ return url },
+  pathParser: function(url) { /*...*/ return {
+      type: 'js',
+      files: ['path/to/file1.js', 'path/to/file2.js']
+    }
+  }
+}
+```
