@@ -2,7 +2,7 @@
   "name": "koa-files-combiner",
   "version": "1.0.3",
   "description": "A koa middleware for combining files.",
-  "repository": "amio/koa-file-combiner",
+  "repository": "amio/koa-files-combiner",
   "keywords": [
     "file",
     "combine",
