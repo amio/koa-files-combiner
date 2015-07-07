@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = function(url) {
 
   const parsed = url.match(/\/combine\/(\w+)(.+)/)
