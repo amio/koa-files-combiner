@@ -1,22 +1,20 @@
-'use strict'
-
-var fs = require('fs')
-var path = require('path')
-var combiner = require('files-combiner')
-var urlParser = require('./libs/path-parser')
+const fs = require('fs')
+const path = require('path')
+const combiner = require('files-combiner')
+const urlParser = require('./libs/path-parser')
 
 module.exports = function(root) {
 
   return function*(next) {
 
     // TODO: support custom urlParser
-    var targetsMeta = urlParser(this.request.url)
+    const targetsMeta = urlParser(this.request.url)
 
     if (!targetsMeta) {
       yield next
     } else {
 
-      var fileList = targetsMeta.files.map(function(filepath) {
+      const fileList = targetsMeta.files.map(function(filepath) {
         return path.join(root, filepath)
       })
 

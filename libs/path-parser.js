@@ -1,12 +1,10 @@
-'use strict'
-
 module.exports = function(url) {
 
-  var parsed = url.match(/\/combine\/(\w+)(.+)/)
+  const parsed = url.match(/\/combine\/(\w+)(.+)/)
 
   if (!parsed) return false
 
-  var targetsMeta = {
+  const targetsMeta = {
     type: parsed[1],
     files: parsed[2].split(',')
   }
@@ -20,9 +18,9 @@ function validate(meta) {
     return false
   }
 
-  // 文件路径需要匹配后缀名
-  var fileReg = new RegExp(meta.type + '$')
-  var i = 0
+  // filepath should end with filetype.
+  const fileReg = new RegExp(meta.type + '$')
+  let i = 0
   while (meta.files[i]) {
     if (!meta.files[i++].match(fileReg)) return false
   }
