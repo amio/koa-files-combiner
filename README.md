@@ -34,11 +34,15 @@ which `options` could be:
 ```
 {
   prePathParser: function(url) { /*...*/ return url },
-  postPathParser: function(url) { /*...*/ return url },
-  pathParser: function(url) { /*...*/ return {
-      type: 'js',
-      files: ['path/to/file1.js', 'path/to/file2.js']
-    }
-  }
+  pathParser: function(url) { /*...*/ return filesObj },
+  postPathParser: function(filesObj) { /*...*/ return filesObj }
+}
+```
+
+the `filesObj` should be:
+```
+{
+  type: 'js',
+  files: ['path/to/file1.js', 'path/to/file2.js']
 }
 ```
