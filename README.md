@@ -1,5 +1,7 @@
 # koa-files-combiner
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amio/koa-files-combiner.svg)](https://greenkeeper.io/)
+
 A koa middleware for combining files.
 
 ### Usage
